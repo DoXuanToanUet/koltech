@@ -65,7 +65,7 @@
 
         <?php
 
-            // Get value percent coupon acf
+            // Get value percent coupon acf 
             $coupon_role = get_field('kol_coupon_rp','option');
             $coupon_role_arr = [];
             foreach ($coupon_role as $key => $value) {

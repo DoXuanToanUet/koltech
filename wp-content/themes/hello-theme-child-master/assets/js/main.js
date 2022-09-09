@@ -17,6 +17,7 @@
             confirm_pass = $('input[name="pwd2"]').val();
             var kol_user_select = $("#kol_role option:selected").val();
            
+            // get percent for coupon
             var percentCoupon = $("input[name='percent_coupon']").val();
             percentCoupon = JSON.parse(percentCoupon);
             percent = parseInt(percentCoupon[kol_user_select])

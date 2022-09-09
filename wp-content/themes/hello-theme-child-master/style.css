@@ -1,0 +1,42 @@
+/* 
+Theme Name: Hello Elementor Child
+Theme URI: https://github.com/elementor/hello-theme/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 1.0.1
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+body #add_payment_method #payment ul.payment_methods li input, body.woocommerce-cart #payment ul.payment_methods li input, body.woocommerce-checkout #payment ul.payment_methods li input { width: auto; margin: -2px .5em 0 0; } body .woocommerce form .form-row .input-checkbox { width: auto; margin: -2px 5px 0 0; }
+body.woocommerce-checkout .cart-collaterals .cart_totals tr td,
+body.woocommerce-checkout .cart-collaterals .cart_totals tr th,
+body .woocommerce table.shop_table th {
+border-top: none;
+border-bottom: 1px solid #e6e6e6;
+border-right: 1px solid #e6e6e6;
+text-align: right;
+padding: 10px 20px;
+} body .woocommerce table.shop_table td { padding: 15px; } body .woocommerce-checkout table.shop_table td { width:50%; text-align: right; border-right: 1px solid #e6e6e6; border-top: 0; }
+body .woocommerce #payment #place_order, .woocommerce-page #payment #place_order { width: 100%;
+display: block;
+text-align: center;
+margin-bottom: 0;
+font-size: 1.25em;
+padding: 1em;
+border-radius: 50px;
+margin-top: .5em;
+}
+body .woocommerce form .form-row-first, body .woocommerce form .form-row-last, body .woocommerce-page form .form-row-first, body .woocommerce-page form .form-row-last { width: 49%; }
+.woocommerce-checkout .woocommerce .col2-set { width: 47%; float: left; margin-right: 4%; } .woocommerce-checkout .woocommerce .col2-set .col-1, .woocommerce-checkout .woocommerce .col2-set .col-2 { margin-bottom: 2em; width: 100%; float: none; } .woocommerce-checkout #order_review_heading, .woocommerce-checkout #order_review { background: #fff; width: 47%; float: right; margin-right: 0; }
+@media only screen and (max-width: 650px) { .woocommerce-checkout .woocommerce .col2-set { width: 100%; float: none; margin-right: 0; } .woocommerce-checkout #order_review_heading, .woocommerce-checkout #order_review { width: 100%; float: none; } }
+.site-footer{
+	position: initial;
+}

@@ -1,0 +1,158 @@
+.kol-login{
+    background: #f6f6f6;
+    .woocommerce{
+        
+        .account-content-wrapper{
+            display: flex;
+            gap: 15px;
+        }
+        .woocommerce-MyAccount-navigation,.woocommerce-MyAccount-content{
+            margin: 16px auto;
+        }
+        form{
+            max-width: 500px;
+            background: #fff;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .woocommerce-MyAccount-navigation{
+            ul{
+                background: #fff;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1);
+                border-radius: 10px;
+                li.is-active{
+                    border-left:2px solid #2579f2;
+                }
+            }
+            width: 260px;
+            
+        }
+        .woocommerce-form-login{
+            background: #fff;
+        }
+        .woocommerce-MyAccount-content{
+            width: calc(100% - 260px);
+        }
+        .dashboard-content-wrapper{
+            // width: 1104px;
+            padding-top: 16px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1);         
+        }
+        .cp-wrapper{
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            .dsh-click{
+                width: calc(100%/3 - 10px);
+                border: 2px solid #eee;
+                padding: 20px 10px;
+                border-radius: 10px;
+            }
+        }
+        .kol-subtitle{
+            color: #000;
+        }
+    }
+    .woocommerce-form.woocommerce-form-login.login{
+        max-width: 500px;
+        margin: 50px auto;
+    }
+}
+
+// Rank 
+.rank{
+    &__container{
+        max-width: 500px;
+        margin: 0px auto;
+    }
+    &__top{
+        background-image: url(https://www.nimo.tv/nms/images/top-bg-effect.8cc47d7c11aabc0e30a3766cfe0c6ae1.png);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8px 8px 0 0;
+        min-height: 80px;
+        padding: 10px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 16px;
+        // height: 100%;
+        // left: 0;
+        // overflow: hidden;
+        // position: absolute;
+        // top: 0;
+        // width: 100%;
+    }
+    &__tab{
+        &-item{
+            color: #000;
+            padding: 15px;
+            &:first-child{
+                border-radius: 46px 0 0 46px;
+                background: #fff;
+            }
+            &:last-child{
+                border-radius: 0 46px 46px 0;
+                background: #fff;
+            }
+        }
+        height: 40px;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+       
+    }
+    &__body{
+        background:#232323;
+        color: #fff;
+        padding: 15px;
+        border-radius: 0 0 8px 8px;
+        border: 1px solid #323232;
+    }
+}
+
+@media (max-width:575px){
+    .kol-login{
+        background: #fff;
+        .woocommerce{
+            .account-content-wrapper{
+               flex-direction: column;
+            }
+            .woocommerce-MyAccount-content{
+                width: 100%;
+            }
+            .dashboard-content-wrapper{
+                width: unset;
+                padding: 0px;
+                box-shadow: none;
+            }
+            .kol-subtitle{
+                color: #000;
+            }
+            .cp-wrapper{
+                padding: 20px;
+                .dsh-click{
+                    width: 100%;
+                    border: 2px solid #eee;
+                    padding: 20px 10px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    form{
+        max-width: 500px;
+        background: #fff;
+        box-shadow: none;
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+}

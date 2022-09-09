@@ -1,0 +1,1082 @@
+.wcusage_options {
+
+}
+.order-date{
+	color: green;
+}
+
+.coupon-orders-single {
+	margin: 20px 0px;
+	width: 100%;
+}
+
+	.wcuTable {
+		display: table;
+		width: 100%;
+		text-align: center;
+		border: 1px solid #E8E8E8;
+
+	}
+	.wcu-dash-coupon-area .wcutabcontent .wcuTableRow {
+		display: table-row;
+		background: linear-gradient(#fefefe, #f6f6f6);
+		color: #333;
+	}
+	.wcuTableRowDropdown {
+		color: #333;
+	}
+	.wcu-dash-coupon-area .wcutabcontent .wcuTableRowDropdown:nth-child(even) td { background: #fdfdfd; }
+	.wcu-dash-coupon-area .wcutabcontent .wcuTableRowDropdown:nth-child(odd) td { background: #fafafa; }
+	.wcu-dash-coupon-area .wcutabcontent .wcuTableRowDropdown:hover td { background: #ffffff; }
+
+	.wcu-dash-coupon-area .wcutabcontent .wcuTableRow td, .wcu-dash-coupon-area .wcutabcontent .wcuTableRow tr:nth-child(odd) td {
+		background: linear-gradient(#fefefe, #f6f6f6);
+		color: #333;
+	}
+	.wcutabcontent a {
+		text-decoration: none;
+	}
+
+	.wcuTableHeading {
+		display: table-header-group;
+		background-color: #ddd;
+	}
+	.wcuTable thead {
+		text-align: center;
+	}
+	.wcuTableCell {
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 7px 10px !important;
+		border: 1px solid #e6e6e6;
+		width: auto;
+		max-width: 200px;
+		/*color: #000;*/
+	}
+	.wcuTableHead {
+		display: table-cell;
+		padding: 7px 10px;
+		font-weight: bold;
+		background: #333 !important;
+		background-color: #333 !important;
+		color: #fff !important;
+		text-align: center;
+	}
+	.wcuTableHead-summary {
+		display: table-cell;
+		padding: 2px 0 !important;
+		font-weight: bold;
+		background: #f4f4f4 !important;
+		background-color: #f4f4f4 !important;
+		color: #333 !important;
+		text-align: center;
+		border: 0 !important;
+		font-size: 14px !important;
+	}
+	.wcuTableFoot {
+		display: table-cell;
+		padding: 7px 10px;
+		border: 1px solid #999999;
+		background: #333;
+		color: #fff;
+		text-align: center;
+	}
+	.wcuTableBody {
+		display: table-row-group;
+	}
+
+	@media screen and (max-width: 720px) {
+		.wcuTableRow, .wcuTableCell, .wcuTableHead, .wcuTableHead-summary {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.wcutablinks i {
+
+	}
+
+	/* Mobile */
+	@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+		.coupon-title {
+			font-size: 25px !important;
+		}
+
+		.wcutablinks {
+			margin: 2px !important;
+		}
+		.wcutab button {
+			margin-top: 2px;
+		}
+
+		/* Force table to not be like tables anymore */
+		.wcuTable table, .wcuTable thead, .wcuTable tbody, .wcuTable th, .wcuTable td, .wcuTable tr, .wcuTableRow, .wcuTableCell {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		.wcuTable thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		.wcuTable tr { border: 1px solid #ccc; display: inline-block; margin-bottom: 5px; }
+
+		.wcu-dash-coupon-area .wcutabcontent .wcuTableRow, .wcu-dash-coupon-area .wcutabcontent .listtheproducts {
+	    display: block;
+			width:  95vw;
+			margin-bottom: 15px;
+		}
+		.wcu-dash-coupon-area .wcutabcontent .listtheproducts, .wcu-dash-coupon-area .wcutabcontent .listtheproducts .wcuTableCell {
+			padding: 10px 0 !important;
+		}
+
+		.wcuTable td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50% !important;
+			padding-top: 5px !important;
+			padding-bottom: 5px !important;
+		}
+
+		.wcuTable td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 5px;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		.wcuTableRow, .wcu-table-payouts {
+			margin-bottom: 20px;
+		}
+
+		.wcuTableCell {
+			display: block;
+			max-width: 100%;
+		}
+		.wcuTableHead {
+			display: block;
+		}
+
+		.wcu-table-monthly-summary td:before {
+			font-weight: bold;
+		}
+
+		.wcu-thetitlerow {
+			display: none !important;
+		}
+
+	}
+
+.wcu-tab-title {
+	margin-top: 25px !important;
+	margin-bottom: 25px;
+}
+
+
+.wcu-coupon-box {
+	margin-top: 20px;
+}
+
+
+.wcutab {
+  overflow: hidden;
+}
+
+.coupon-title {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1060px) {
+
+	.wcuTableCell-ref-website {
+		max-width: 250px !important;
+	}
+
+	.wcuTableCell-ref-landing {
+		max-width: 350px !important;
+	}
+
+}
+
+/* Logout */
+
+.wcusage-dash-logout {
+	font-size: 12px;
+	margin-top: 14px;
+}
+
+/* Style the buttons inside the tab */
+.wcutab button {
+  background-color: #333;
+  color: #fff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  margin: 2px;
+}
+.wcu-active-tab {
+	opacity: 0.8;
+}
+#search-coupon-all, #search-coupon, #search-criteria {
+	min-height: 40px;
+	padding: 5px 10px;
+	max-width: 150px;
+}
+#wcu-paypal-input, #wcu-paypal-input2 {
+	margin-top: 10px;
+}
+#wcu-paypal-button, .wcu-paypal-button, #wcu-email-settings-update-button, #wcu-billing-update-button, #wcu-register-button {
+	margin-top: 12px;
+	font-size: 16px;
+	min-height: 40px;
+	padding: 5px 20px;
+}
+#wcu-register-button {
+	margin-top: 15px;
+}
+.wcu-save-settings-button, #wcu6 .woocommerce-Button, #wcu6 button {
+	border: 2px solid #333;
+	border-radius: 0;
+}
+#paypal-input {
+	width: 300px; max-width: 100%;
+}
+.create-stripe-link, .create-stripe-link span, .create-stripe-link i {
+	color: #fff;
+}
+.create-stripe-link {
+	text-decoration: none !important;
+}
+#submitpayoutyes {
+	background: green; padding: 10px 15px; color: #fff; font-weight: bold; width: auto; display: block;
+}
+#submitpayoutno {
+	cursor: not-allowed; padding: 10px 15px;
+}
+#payouts_invoice_label:hover {
+	cursor: pointer;
+}
+#wcu_copylink {
+	padding: 2px 10px !important;
+	border-radius: 20px !important;
+}
+#wcusage_copylink, .wcusage_copylink {
+	margin: 0;
+	padding: 2px 10px !important;
+	border-radius: 20px !important;
+}
+#wcusage_copylink:active, .wcusage_copylink:active, #wcusage_copylink:focus, .wcusage_copylink:focus {
+	opacity: 0.8;
+}
+#wcusage_copylink i {
+	margin: 0;
+}
+
+.referral-url-box, .creatives-box {
+	background: linear-gradient(#fefefe, #f6f6f6);
+	color: #333;
+	box-shadow: 0px 0px 4px #d0d0d0;
+	border-radius: 10px;
+	padding: 10px 20px;
+	margin-top: 10px;
+}
+.referral-url-box p, .creatives-box p, .referral-url-box strong {
+	color: #333 !important;
+}
+
+/* WC ACcount Tab */
+
+/*
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--coupon-affiliate a:before{
+	content: "\f53a"
+}
+*/
+
+/* Payout Settings */
+
+.wcu-stripe-button {
+	display: inline-block;
+	width: auto;
+	margin: 0 0 7px 0 !important;
+	padding: 5px 20px !important;
+	background: #008cdd !important;
+	color: #fff !important;
+	font-size: 20px !important;
+	border-radius: 10px !important;
+	text-decoration: none !important;
+}
+
+.wcu-stripe-error {
+	color: red;
+}
+
+/* Settings Tab */
+
+#wcu6 label {
+	width: 100%;
+}
+#wcu6 input[type="text"], #wcu6 input[type="email"], #wcu6 input[type="password"] {
+	min-width: 33%;
+	margin: 0px 0 2px 0;
+  padding: 5px;
+}
+#wcu6 em {
+	width: 100%;
+}
+
+.wcu-settings-header {
+	margin-top: 50px !important;
+}
+
+/* Monthly Summary */
+
+.listtheproducts {
+	display: none;
+}
+.listtheproducts .wcuTableCell {
+	text-align: center;
+}
+.listtheproducts::before {
+	display: none !important;
+	content: "" !important;
+}
+
+.listtheproducts-small {
+	display: none;
+}
+@media only screen and (max-width: 1024px)  {
+	.listtheproducts-summary {
+		display: none !important;
+	}
+	.listtheproducts-small {
+		display: block !important;
+	}
+}
+
+/* Change buttons */
+.wcutab button {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 10px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+/* Change buttons on hover */
+.wcutab button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Change buttons active */
+.wcutab button.active {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Style the tab content */
+.wcutabcontent {
+  display: none;
+  border-top: none;
+}
+
+/* Font Styles */
+.wcutabcontent p, .wcutabcontent td, .wcutabcontent tr, .wcutabcontent code, .wcuTableCell {
+	font-size: 17px;
+}
+
+.wcutabcontent p {
+	margin: 8px 0;
+	padding: 0 !important;
+}
+
+.listproductsbutton {
+	display: block;
+	text-align: center;
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* Filters */
+
+.wcu-button-export {
+	border: 1px solid #333 !important;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.wcusage_settings_form {
+	margin: 0;
+	padding: 0;
+}
+.wcusage_settings_form input[type="submit"], .wcusage_settings_form input[type="button"], .wcusage_settings_form input[type="date"], .wcusage_settings_form input[type="month"],
+.wcu-monthly-orders-button, .wcu-button-export, .submitpayoutno, .submitpayoutyes {
+	height: 40px !important;
+	font-size: 15px !important;
+	padding: 0 10px !important;
+	display: inline-block !important;  
+	border: 1px solid #333;
+}
+.wcusage_settings_form input[type="date"], .wcusage_settings_form input[type="month"] {
+	min-width: 0 !important;
+}
+
+.wcu-filters-col1, .wcu-filters-col2 {
+	display: table;
+	height: 70px;
+}
+.wcu-filters-inner {
+	display: table-cell; vertical-align: middle;
+}
+.wcu-order-filters-space {
+	min-width: 15px;
+	display: inline-block;
+}
+@media only screen and (min-width: 940px) {
+	.wcu-filters-col1 {
+		width: 80%; float: left;
+	}
+	.wcu-filters-col2 {
+		width: 20%; float: left;
+	}
+	.wcu-button-export {
+		float: right;
+	}
+}
+@media only screen and (max-width: 939px) {
+	.wcu-filters-col1 {
+		margin: 20px 0;
+		width: 100%;
+		text-align: center;
+	}
+	.wcu-filters-col2 {
+		width: 100%;
+		text-align: center;
+	}
+	.ordersfilterbutton {
+		display: block;
+		margin: 4px auto;
+		max-width: 150px !important;
+	}
+	.wcu-order-filters-field {
+		width: 100%;
+		display: block;
+	}
+	.wcu-order-filters-space {
+		display: none;
+	}
+}
+
+.wcu-order-filters-field input {
+	max-width: 190px !important;
+	display: inline-block;
+}
+
+.wcu-order-filters-field .minimal-form-input {
+	width: auto !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.wcu-order-filters label {
+	display: inline-block;
+}
+
+/* Registration */
+
+.wcu_form_affiliate_register label:first-letter {
+	text-transform: capitalize;
+}
+.wcu-form-section .wcusage-register-form-title, .wcu-form-section .wcusage-login-form-title {
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+.wcu_form_affiliate_register input[type="text"],
+.wcu_form_affiliate_register input[type="password"],
+.wcu_form_affiliate_register input[type="email"] {
+  width: 100%;
+	min-height: 30px;
+}
+.wcusage-login-form-col label, .wcu_form_affiliate_register label {
+	font-weight: bold;
+}
+.wcu_form_affiliate_register label {
+	display: block;
+	width: 100% !important;
+}
+.wcu_form_affiliate_register p {
+	margin-bottom: 20px;
+}
+#wcu-register-button, .wcusage-login-form-col .woocommerce-button {
+	padding: 10px;
+	min-width: 200px !important;
+	cursor: pointer !important;
+}
+.wcu-reg-terms {
+	font-weight: bold;
+}
+.wcu-form-section .wcu-reg-terms p {
+	line-height: 1.5em;
+}
+.wcu_form_style_columns .wcu-register-field-col-1, .wcu_form_style_columns .wcu-register-field-col-2 {
+	width: 49.5%;
+	float: left;
+	display: inline-block;
+}
+.wcu_form_style_columns .wcu-register-field-col-1 {
+	margin-right: 1%;
+}
+
+	/* Registration Form Style 2 */
+	.wcu_form_style_2 input[type="text"], .wcu_form_style_2 input[type="email"], .wcu_form_style_2 input[type="password"] {
+			margin: 4px 0 5px 0 !important;
+	    width: 100% !important;
+	    max-width: 100% !important;
+	    border: 3px solid #DADADA !important;
+			border-radius: 4px !important;
+	}
+
+	/* Registration Form Style 3 */
+	.wcu_form_style_3 p {
+		margin-bottom: 15px !important;
+	}
+	.wcu_form_style_3 input[type="text"], .wcu_form_style_3 input[type="email"], .wcu_form_style_3 input[type="password"] {
+			margin: 4px 0 0px 0 !important;
+			padding: 10px;
+	    width: 100% !important;
+	    max-width: 100% !important;
+	    border: 1px solid #DADADA !important;
+			border-radius: 5px !important;
+	}
+
+/* Ref Urls campaigns */
+
+.wcu-campaigns-col1, .wcu-campaigns-col2 {
+	display: table;
+}
+#wcu-add-campaign, #wcu-add-directlink {
+	padding: 0;
+}
+@media only screen and (min-width: 760px) {
+	.wcu-campaigns-col1 {
+		width: 75%; float: left;
+	}
+	.wcu-campaigns-col2 {
+		width: 25%; float: left; text-align: right;
+	}
+	#wcu-referral-campaign {
+		min-height: 27px;
+		width: 200px;
+		max-width: 100%;
+		float: right;
+	}
+	#wcu-creatives-campaign {
+		min-height: 27px;
+	}
+	#wcu-add-campaign-name {
+		width: 120px;
+		max-width: 100%;
+		font-size: 12px;
+		padding: 5px;
+	}
+}
+@media only screen and (max-width: 759px) {
+	.wcu-campaigns-col1 {
+		width: 100%;
+		text-align: center;
+	}
+	.wcu-campaigns-col2 {
+		width: 100%;
+		text-align: center;
+	}
+	#wcu-referral-campaign {
+		margin: 0 auto;
+	}
+	#wcu-creatives-campaign {
+		margin: 0 auto;
+		float: none !important;
+	}
+}
+
+/* Info Boxes */
+
+.wcusage-info-box {
+	padding: 25px 15px 25px 100px;
+	background: linear-gradient(#fefefe, #f6f6f6);
+	color: #000;
+	border: 1px solid #f3f3f3;
+	display: block;
+	border-radius: 10px;
+	margin: 0.5%;
+	box-shadow: 0px 0px 4px #d0d0d0;
+	width: 99%;
+	position:relative;
+}
+.wcusage-info-box:before {
+  content:"";
+  font-family: 'Font Awesome 5 Free';
+	font-size: 40px;
+  position:absolute;
+  left:30px;
+  top:44px;
+	color: #bebebe;
+	width: 50px;
+	text-align: center;
+  font-style: normal;
+  font-weight: 900;
+	height: 40px !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+ }
+.wcusage-info-box-dollar:before { content:"\f155"; }
+.wcusage-info-box-discount:before { content:"\f02b"; }
+.wcusage-info-box-discounts:before { content:"\f02c"; }
+.wcusage-info-box-usage:before { content:"\f0c0"; }
+.wcusage-info-box-sales:before { content:"\f07a"; }
+.wcusage-info-box-commission:before { content:"\f53a"; }
+.wcusage-info-box-percent:before { content:"\f541"; }
+.wcusage-info-box-clicks:before { content:"\f245"; }
+.wcusage-info-box-convert:before { content:"\f058"; }
+
+	@media only screen and (min-width: 1060px) {
+		.wcusage-info-box {
+			width: 32.3%;
+			float: left;
+		}
+	}
+.wcusage-info-box:hover {
+	background: #f9f9f9;
+}
+.wcusage-info-box p {
+	margin: 8px 0 !important;
+	padding: 0 !important;
+	font-size: 32px !important;
+	line-height: 32px !important;
+}
+.wcusage-info-box .wcusage-info-box-title {
+	width: 100%;
+	font-size: 16px;
+	display: block;
+	margin-bottom: 5px;
+	line-height: 20px;
+	color: #000;
+}
+.wcusage-info-box p, .wcusage-info-box span {
+	color: #000;
+}
+.wcusage-info-box .wcusage-info-box-value {
+	width: 100%;
+	font-size: 22px;
+	display: block;
+}
+
+.wcusage-last-days {
+	margin: 15px 0 10px 0 !important;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: #333;
+	padding: 0 !important;
+}
+
+/* Graphs */
+
+.wcusagechart {
+	padding: 0px 10px 10px 10px;
+	box-shadow: 0px 0px 4px #d0d0d0;
+	background: #fff;
+	width: 100%;
+	min-height: 450px;
+}
+
+.wcusage-num-pos {
+	color: green !important;
+	font-size: 12px;
+	position: absolute;
+	margin-left: 10px;
+	bottom: 27%;
+}
+.wcusage-num-neg {
+	color: red !important;
+	font-size: 12px;
+	position: absolute;
+	margin-left: 10px;
+	bottom: 27%;
+}
+@media only screen and (max-width: 1260px) {
+	.wcusage-num-pos, .wcusage-num-neg {
+		display: block !important;
+		margin-bottom: -30px !important;
+		margin-left: 0px;
+	}
+}
+
+.wcusagechart {
+	visibility: hidden;
+}
+
+#mla_chart_div table.google-visualization-orgchart-table p, #mla_chart_div table.google-visualization-orgchart-table a {
+    font-family: arial, sans-serif;
+}
+
+/* Loading */
+
+.wcu-loading-loader .loader,
+.wcu-loading-loader .loader:before,
+.wcu-loading-loader .loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.wcu-loading-loader .loader {
+  color: #000;
+  font-size: 10px;
+  margin: 0px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.wcu-loading-loader .loader:before,
+.wcu-loading-loader .loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.wcu-loading-loader .loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.wcu-loading-loader .loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+.wcu-loading-loader {
+	margin-top: 15px;
+	width: 100px;
+}
+
+/* Coupon List */
+
+@media only screen and (min-width: 1240px) {
+	.wcu-user-coupon-list-group {
+		display: flex;
+	}
+}
+.wcu-user-coupon-list {
+	margin: 10px;
+	float: left;
+	padding: 15px 20px;
+	text-align: center;
+	font-size: 18px;
+	background: linear-gradient(#fefefe, #f6f6f6);
+	box-shadow: 0px 0px 4px #d0d0d0;
+	border: 1px solid #f3f3f3;
+	border-radius: 10px;
+	word-wrap: break-word;
+}
+.wcu-coupon-list-button, .wcu-coupon-list-button2 {
+	padding: 5px 20px;
+	background: #333 !important;
+	border: 1px solid #333;
+	display: block;
+	text-align: center;
+	color: #fff !important;
+	border-radius: 4px;
+}
+.wcu-coupon-list-button:hover, .wcu-coupon-list-button2:hover {
+	background: #000 !important;
+	color: #fff;
+}
+@media only screen and (min-width: 1240px) {
+	.wcu-user-coupon-list {
+		width: calc(33.33% - 20px);
+	}
+}
+@media only screen and (min-width: 820px) and (max-width: 1239px) {
+	.wcu-user-coupon-list {
+		width: calc(50% - 20px);
+	}
+}
+@media only screen and (max-width: 820px) {
+	.wcu-user-coupon-list {
+		width: calc(100% - 20px);
+	}
+}
+
+.wcu-loading-image {
+	display: inline-block;
+}
+
+.wcusage-loading {
+	color: green;
+}
+
+.wcusage-refresh-data {
+	margin-top: -2px;
+}
+
+/* Ref URL */
+
+.wcusage_custom_ref_url {
+	margin-bottom: 0 !important;
+	padding: 5px;
+}
+
+/* Social Icons */
+
+.wcusage-social-icon {
+    font-size: 30px;
+		margin: 0 4px 0 0;
+}
+
+.wcusage-social-link-whatsapp {
+	display: none;
+}
+@media only screen and (max-width: 780px;) {
+	.wcusage-social-link-whatsapp {
+		display: block;
+	}
+}
+
+/* Login */
+
+.wcusage-login-form-col {
+	width: 50%; display: block; float: left; padding: 20px;
+}
+.wcusage-login-form-col input[type=text] {
+	width: 100% !important;
+	max-width: 100% !important;
+}
+.wcu-form-section p {
+	margin-top: 0;
+	line-height: 1em;
+}
+.wcusage-login-form-section .woocommerce-form-login {
+	padding: 0 !important;
+}
+.wcusage-login-form-section .woocommerce-form-login .woocommerce-form__input-checkbox {
+    width: 20px;
+}
+.wcusage-login-form-section .woocommerce-form-login__rememberme {
+	width: 100% !important;
+	margin-bottom: 20px !important;
+	display: block !important;
+}
+.wcusage-login-form-section .woocommerce-form__input-checkbox {
+	margin-bottom: 0px !important;
+}
+@media only screen and (max-width: 720px) {
+	.wcusage-login-form-col {
+		width: 100%; min-width: 300px; display: block; float: left; padding: 20px;
+	}
+}
+
+/* Creatives */
+
+.creatives-box {
+	margin-top: 15px;
+	margin: 10px;
+	float: left;
+	text-align: center;
+	border: 2px solid #f3f3f3;
+}
+.creatives-box-image {
+		position: relative;
+		width: 90%;
+		overflow: hidden;
+		margin: 0 auto;
+		margin-bottom: 0px;
+		background: #fff;
+		border: 2px solid #f3f3f3;
+}
+.creatives-box-image:before{
+		content: "";
+		display: block;
+		padding-top: 100%;
+}
+.creatives-box-image-content {
+		position:  absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		text-align: center;
+}
+.creatives-box img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+.wcusage_creativelink {
+	width: 90%;
+	border-radius: 0 !important;
+	border: 2px solid #f3f3f3 !important;
+	border-radius: 4px !important;
+	margin-bottom: 10px;
+}
+
+/* Tooltip */
+
+.wcu-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.wcu-tooltip .wcu-tooltiptext {
+  visibility: hidden;
+	width: max-content;
+	min-width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute !important;
+  z-index: 1 !important;
+	margin-left: 5px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.wcu-tooltip:hover .wcu-tooltiptext {
+  visibility: visible;
+}
+
+/* MLA */
+
+.wcu-mla-network-button {
+margin: 2px 0 7px 0 !important;
+padding: 2px 5px 2px 5px !important;
+text-decoration: none !important;
+}
+.wcu-mla-network-tier {
+font-size: 12px !important;
+width: 20px !important;
+margin-top: -15px !important;
+margin-bottom: -8px !important;
+margin-left: -7px !important;
+opacity: 0.2 !important;
+cursor: default !important;
+}
+.wcu-mla-network-avatar {
+max-width: 50px;
+border-radius: 50px;
+border: 2px solid #f3f3f3;
+}
+.wcu-mla-network-user {
+font-size: 18px !important;
+line-height: 25px !important;
+min-width: 150px !important;
+}
+.wcu-mla-network-coupon {
+margin-top: 2px !important;
+font-size: 12px !important;
+line-height: 12px !important;
+}
+.wcu-mla-network-amount {
+cursor: default !important;
+font-size: 17px !important;
+line-height: 17px !important;
+margin: 2px 0 5px 0 !important;
+}
+.wcu-mla-network-email {
+text-decoration: none;
+display: inline-block !important;
+margin-top: 4px !important;
+margin-bottom: -2px !important;
+}
+.wcu-mla-network-email:hover {
+text-decoration: none !important;
+opacity: 0.8;
+}
+
+/* MLA Chart */
+
+#mla_chart_div table td { background: #fff !important; }
+#mla_chart_div td.google-visualization-orgchart-node {
+	padding: 18px 12px;
+	font-weight: bold;
+	background: linear-gradient(#fefefe, #f6f6f6) !important;
+	box-shadow: 0px 0px 4px #d0d0d0 !important;
+	border: 0 !important;
+	border-radius: 10px;
+	word-wrap: break-word;
+	margin-left: -2px;
+	cursor: grab;
+}
+#mla_chart_div table td a:hover { opacity: 0.75; text-decoration: underline; }
+#mla_chart_div .google-visualization-orgchart-linenode {
+	padding: 10px;
+}
+#mla_chart_div .google-visualization-orgchart-linebottom, #mla_chart_div .google-visualization-orgchart-linetop, #mla_chart_div .google-visualization-orgchart-lineleft, #mla_chart_div .google-visualization-orgchart-lineright {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#mla_chart_div {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	overflow: scroll;
+	overflow: auto;
+	cursor: grab;
+	-webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+		 -khtml-user-select: none; /* Konqueror HTML */
+			 -moz-user-select: none; /* Old versions of Firefox */
+				-ms-user-select: none; /* Internet Explorer/Edge */
+						user-select: none;
+}
+#mla_chart_div .google-visualization-orgchart-table {
+	cursor: grab;
+	display: flex;
+	width: auto;
+}
+#mla_chart_div::-webkit-scrollbar {
+	display: none;
+}

@@ -1,0 +1,136 @@
+@import "login.scss";
+.kol_alert{
+    display: none;
+}
+// Register style
+.devRegis-item{
+    margin-bottom: 10px;
+}
+.devRegis-alert{
+    padding: 4px 0px;
+    color: red;
+}
+.show-password-icon{
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+.register-form {
+    max-width: 450px;
+    margin: 0px auto;
+    background:#fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1);         
+}
+.devRegis-item {
+    position: relative;
+    label{
+        color: #000 !important;
+        font-weight: bold !important;
+    }
+    input{
+        letter-spacing: 0px!important;
+        font-weight: 500 !important;
+        border-radius: 8px !important;
+    }
+}
+.devRegis-item .show-password-icon {
+    position: absolute;
+    right: 8px;
+    top: calc(50% + 8px);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+// Custom admin style 
+.woocommerce-MyAccount-navigation{
+    border-right: 2px solid #f3f4f8;
+    ul{
+        list-style: none;
+        padding-left: 0px;
+    }
+    li{
+        padding-left: 10px;
+    }
+    li.is-active {
+        background: #f3f4f8;
+        a{
+            color: #111827;
+        }
+    }
+    li a{
+        color: #6b7280;
+        display: block;
+        padding: 15px 10px;
+        border-radius: 6px;
+        font-weight: 500;
+        &:hover{
+            color: #111827;
+        }
+    }
+}
+
+// Custom Avatar
+.ac-avatar{
+    .avatar-img{
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+}
+#profile_picture{
+    position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.woocommerce-account .woocommerce h2{
+    display: none;
+}
+.kol-admin-report{
+    .user-manager{
+        box-shadow: 0 1px 4px 0 #0002;
+        border-radius: 4px;
+        background: #fff;
+    }
+}
+.woocommerce-MyAccount-navigation{
+    li{
+        display: flex;
+        align-items: center;
+    }
+    svg{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+@media (max-width:991px){ 
+    .woocommerce-account {
+        .dashboard-content-wrapper,.woocommerce-MyAccount-content,.woocommerce-MyAccount-navigation{
+            width: 100%;
+        }
+        .woocommerce{
+            background:#fff;
+        }
+    }
+     
+}
+@media (max-width:575px){
+   
+    .woocommerce-account {
+       
+    }
+    .woocommerce{
+        background:#fff;
+    }
+    
+}

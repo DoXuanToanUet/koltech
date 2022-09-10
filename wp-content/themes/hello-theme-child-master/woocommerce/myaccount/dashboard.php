@@ -88,12 +88,17 @@ $allowed_html = array(
 <!-- Custom show dashboard infomation  -->
 <?php $current_user = wp_get_current_user(); ?>
 <?php if ( ! $current_user->exists() ) : return; else:?>
+	<div class="profile-break"></div>
 	<div class="ac-avatar">
-		<p>Avatar</p>
+		<p class="fw-bold">Avatar</p>
 		
 		<div class="avatar-row d-flex align-items-center">
 			<div class="avatar-img pe-3">
-				<img id="avtChange" src="<?php the_field('tt_userImage','user_'. $current_user->ID); ?>" />
+				<?php if( get_field('tt_userImage','user_'. $current_user->ID)): ?>
+					<img id="avtChange" src="<?php the_field('tt_userImage','user_'. $current_user->ID); ?>" />
+				<?php else:?>
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/avatar.svg" alt="">
+				<?php endif;?>
 			</div>
 			<div class="avatar-button">
 				<!-- <form action="" method="post"  enctype="multipart/form-data" id="test">
@@ -103,14 +108,64 @@ $allowed_html = array(
 				</form>	 -->
 				<form action="<?php echo get_stylesheet_directory_uri(); ?>/process_upload.php" method="post" enctype="multipart/form-data">
 					<input type="file" name="profile_picture"  id="profile_picture"/>
-					<label for="profile_picture"><a  class="btn btn-outline-primary">Upload</a></label>
-					<span class="px-2">Size:400X400</span>
+					<div class="pb-2">
+						<label for="profile_picture"><a  class="btn btn-outline-primary">Upload</a></label>
+						<span class="px-2"> Vui lòng chọn ảnh kích thước 400x400</span>
+					</div>
+					<!-- <span class="px-2"> Chọn hình ảnh phù hợp, không phản cảm</span> -->
 					<input type="submit"  class="btn btn-outline-primary" name="submit" value="Save" />
 				</form> 
 			</div>
 		</div>
+		<div class="profile-break"></div>
 		<div class="profile-info">
-			<div class="row py-3">
+			<p class="fw-bold">Tổng quan</p>
+			<div class="profile-common">
+				<?php 
+					global $wp_roles;
+					$user_data = get_userdata($current_user->ID);
+					$user_role_slug = $user_data->roles[0];
+					$user_role_name = $wp_roles->roles[$user_role_slug]['name'];
+				?>
+				<div class="row">
+					<div class="col col-lg-3 col-md-4 col-6 py-2">
+						<div class="profile-item ">
+							<span class="pb-2 d-block">Tên đăng nhập</span>
+							<span class="profile-name"><?php echo $current_user->user_login; ?> </span>
+						</div>
+					</div>
+					<div class="col col-lg-3 col-md-4 col-6 py-2">
+						<div class="profile-item ">
+							<span class="pb-2 d-block">Họ và tên</span>
+							<span class="profile-name"><?php echo $current_user->user_lastname.' '.$current_user->user_firstname;?> </span>
+						</div>
+					</div>
+					<div class="col col-lg-3 col-md-4 col-6 py-2">
+						<div class="profile-item ">
+							<span class="pb-2 d-block">Tên hiển thị</span>
+							<span class="profile-name"><?php echo $current_user->display_name;?> </span>
+						</div>
+					</div>
+					<div class="col col-lg-3 col-md-4 col-6 py-2">
+						<div class="profile-item ">
+							<span class="pb-2 d-block">Email</span>
+							<span class="profile-name"><?php echo $current_user->user_email;?> </span>
+						</div>
+					</div>
+					<div class="col col-lg-3 col-md-4 col-6 py-2">
+						<div class="profile-item ">
+							<span class="pb-2 d-block">Loại tài khoản</span>
+							<span class="profile-name"><?php echo $user_role_name;?> </span>
+						</div>
+					</div>
+					<?php 
+						// echo "<pre>";
+						// var_dump( );
+						// echo "</pre>";
+					?>
+				</div>
+			</div>
+			<!-- <div class="row py-3">
 				<div class="col-lg-6 col-12">
 					<div class="mb-3">
 						<label for="lastname" class="form-label">Họ</label>
@@ -139,7 +194,8 @@ $allowed_html = array(
 						<input type="email" class="form-control" id="email" readonly aria-describedby="emailHelp" value="<?php echo $current_user->user_email;?>">
 					</div>
 				</div>
-			</div>
+			</div> -->
+			<div class="mb-2"></div>
 			<a href="<?php echo esc_url( wc_get_account_endpoint_url('edit-account') ); ?>" class="btn btn-outline-primary">Sửa thông tin</a>
 		</div>
 	</div>

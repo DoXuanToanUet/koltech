@@ -90,7 +90,18 @@
 	overflow: hidden;
 	clip: rect(1px, 1px, 1px, 1px);
 }
-
+.profile-info{
+    .profile-common{
+        .profile-name{
+            font-weight: 600;
+            color: #000;
+        }
+    }
+}
+.profile-break{
+    border-bottom: 1px solid #eee;
+    margin: 10px 0px;
+}
 .woocommerce-account .woocommerce h2{
     display: none;
 }

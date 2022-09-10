@@ -11,7 +11,7 @@
     ?>
     
     <div class="kol-user-manager">
-        <p class="kol-subtitle">User Manage</p>
+        <p class="kol-subtitle fw-bold">User Manage</p>
         <div class="row g-3">
             <div class="col-lg-2 col-6">
                 <div class="user-manager p-3 text-center">
@@ -45,7 +45,7 @@
     </div>
     
     <div class="kol-coupon-manager py-4">
-        <p>User Coupon Manage</p>  
+        <p class="fw-bold">User Coupon Manage</p>  
         <div class="row kol-tab d-flex g-3">
             <!-- Giải pháp dùng select gọi ajax -->
             <div class="box-input">

@@ -60,7 +60,7 @@
 }
 
 .rank__container {
-  max-width: 500px;
+  max-width: 400px;
   margin: 0px auto;
 }
 .rank__top {
@@ -101,6 +101,15 @@
   padding: 15px;
   border-radius: 0 0 8px 8px;
   border: 1px solid #323232;
+}
+
+.rank_user_avatar {
+  margin-right: 10px;
+}
+.rank_user-icon {
+  width: 34px;
+  height: 34px;
+  text-align: center;
 }
 
 @media (max-width: 575px) {
@@ -227,6 +236,16 @@
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+.profile-info .profile-common .profile-name {
+  font-weight: 600;
+  color: #000;
+}
+
+.profile-break {
+  border-bottom: 1px solid #eee;
+  margin: 10px 0px;
 }
 
 .woocommerce-account .woocommerce h2 {

@@ -67,7 +67,7 @@
 // Rank 
 .rank{
     &__container{
-        max-width: 500px;
+        max-width: 400px;
         margin: 0px auto;
     }
     &__top{
@@ -116,8 +116,18 @@
         border-radius: 0 0 8px 8px;
         border: 1px solid #323232;
     }
-}
 
+}
+.rank_user{
+    &_avatar{
+        margin-right: 10px;
+    }
+    &-icon{
+        width: 34px;
+        height: 34px;
+        text-align: center;
+    }
+}
 @media (max-width:575px){
     .kol-login{
         background: #fff;

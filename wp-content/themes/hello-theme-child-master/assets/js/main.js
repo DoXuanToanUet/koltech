@@ -194,21 +194,21 @@
         });
 
         //Phần tab chính sách phát đại lí, cá nhân
-        // function activeTab(obj) {
-        //     $(".kol-tab .common-tab").removeClass("active-tab");
-        //     let id = $(obj).data("tab");
-        //     $(obj).addClass("active-tab");
-        //     $(".kol-tab-content").hide();
-        //     // console.log(id);
-        //     $('.'+id).show();
-        // }
-        // $('.kol-tab .common-tab').click(function (e) {
-        //     // console.log(e.target)
-        //     e.preventDefault();
-        //     activeTab(this);
+        function activeTab(obj) {
+            $(".rank__tab .common-tab").removeClass("active-tab");
+            let id = $(obj).data("tab");
+            $(obj).addClass("active-tab");
+            $(".rank__tab-content").hide();
+            // console.log(id);
+            $('.'+id).show();
+        }
+        $('.rank__tab .common-tab').click(function (e) {
+            // console.log(e.target)
+            e.preventDefault();
+            activeTab(this);
 
-        // })
-        // activeTab('.kol-tab .common-tab:first-child');
+        })
+        activeTab('.rank__tab .common-tab:first-child');
 
 
         

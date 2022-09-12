@@ -71,7 +71,7 @@
         margin: 0px auto;
     }
     &__top{
-        background-image: url(https://www.nimo.tv/nms/images/top-bg-effect.8cc47d7c11aabc0e30a3766cfe0c6ae1.png);
+        background-image: url(https://www.nimo.tv/nms/images/top-bg-anchor-gift.70847cc11b69ef5ec5082a42d4aa751b.png);
         background-position: 100%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -90,15 +90,20 @@
     }
     &__tab{
         &-item{
-            color: #000;
-            padding: 15px;
+            // color: #000;
+            color: #fff;
+            padding: 12px;
+            background-color: rgba(0,0,0,.4);
+            cursor: pointer;
+            &.active-tab{
+                background: #fff;
+                color: #000;
+            }
             &:first-child{
                 border-radius: 46px 0 0 46px;
-                background: #fff;
             }
             &:last-child{
                 border-radius: 0 46px 46px 0;
-                background: #fff;
             }
         }
         height: 40px;
@@ -106,8 +111,7 @@
         line-height: 15px;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-       
+        justify-content: flex-start; 
     }
     &__body{
         background:#232323;

@@ -149,6 +149,7 @@ require get_stylesheet_directory() . '/inc-function/inc_dashboard_kol.php';
 require get_stylesheet_directory() . '/inc-function/inc_kol.php';
 require get_stylesheet_directory() . '/inc-function/custom-avartar.php';
 require get_stylesheet_directory() . '/inc-function/inc_acf_roles.php';
+require get_stylesheet_directory() . '/inc-function/shrt_rank.php';
 require get_stylesheet_directory() . '/template-page/shrt-ranks.php';
 
 

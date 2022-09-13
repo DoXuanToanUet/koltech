@@ -126,6 +126,25 @@
   .kol-login .woocommerce .woocommerce-MyAccount-content {
     width: 100%;
   }
+  .kol-login .woocommerce .woocommerce-MyAccount-navigation {
+    padding: 0px;
+    width: 100%;
+    border: none;
+  }
+  .kol-login .woocommerce .woocommerce-MyAccount-navigation ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .kol-login .woocommerce .woocommerce-MyAccount-navigation ul li {
+    padding: 0px 8px;
+  }
+  .kol-login .woocommerce .woocommerce-MyAccount-navigation ul li.is-active {
+    border-top: 2px solid #2579f2;
+    border-left: 0px;
+  }
+  .kol-login .woocommerce .woocommerce-MyAccount-navigation ul .dsh-hidden {
+    display: none;
+  }
   .kol-login .woocommerce .dashboard-content-wrapper {
     width: unset;
     padding: 0px;
@@ -221,6 +240,7 @@
   padding: 15px 10px;
   border-radius: 6px;
   font-weight: 500;
+  width: 100%;
 }
 .woocommerce-MyAccount-navigation li a:hover {
   color: #111827;

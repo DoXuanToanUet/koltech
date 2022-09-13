@@ -9,7 +9,7 @@
         // var_dump( $usercount['avail_roles'] );
         // echo "</pre>";
     ?>
-    
+    <p class="fw-bold">Báo cáo</p>
     <div class="kol-user-manager">
         <p class="kol-subtitle fw-bold">User Manage</p>
         <div class="row g-3">

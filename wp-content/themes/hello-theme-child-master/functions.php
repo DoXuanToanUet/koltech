@@ -213,3 +213,58 @@ function phoneResult($data){
 // $path = 'http://kolt.local/wp-json/techwings/v1/coupon';
 // $str = file_get_contents($path);
 // var_dump( json_decode($str) );
+
+
+// ajax order last
+add_action('wp_ajax_WlastOrder', 'WlastOrder');
+add_action('wp_ajax_nopriv_WlastOrder', 'WlastOrder');
+
+function WlastOrder(){
+
+    // ob_start();
+    $user_arr=[];
+    $last_order_id = wc_get_orders(array('limit' => 1, 'return' => 'ids')); // Get last Order ID (array)
+    $order_last = wc_get_order($last_order_id[0]);
+    $order_data_last = $order_last->get_data(); // The Order data
+    $order_date_created = $order_data_last['date_created']->date('Y-m-d H:i:s');
+    $user_orders =[];
+    foreach ($order_last->get_items() as $item_key => $item ):
+        $product      = $item->get_name(); // Get the WC_Product object
+        $product_id   = $item->get_product_id(); // the Product id
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'single-post-thumbnail' );
+        // $date      = $item->get_date(); // Get the WC_Product object
+        array_push($user_orders, array(
+            // "orderID" => $orderObj->get_id(),
+            "orderDate" =>    $order_date_created ,
+            'product' => $product,
+            'image' =>$image[0]
+        ));
+    endforeach;
+    $user_id = $order_last->get_user_id();
+    $get_user = get_user_by( 'id', $user_id ); 
+    $user_display_name = $get_user->display_name;
+    array_push( $user_arr,array(
+        'userName'   => $user_display_name,
+        $user_orders
+    ));
+    // return $user_arr;
+ 
+    // $result = ob_get_clean();
+    if ($user_arr){
+        wp_send_json_success(array(
+            "message"=>"success",
+            "showdata"=> $user_arr
+        ));  
+        die();
+    }
+}
+
+// Custom order number 
+// add_filter( 'woocommerce_order_number', 'change_woocommerce_order_number' );
+
+// function change_woocommerce_order_number( $order_id ) {
+//     $prefix = 'VK/';
+//     $suffix = '/TS';
+//     $new_order_id = $prefix . $order_id . $suffix;
+//     return $new_order_id;
+// }

@@ -41,7 +41,7 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 $oldcol = 1;
 $col    = 1;
 ?>
-
+<p class="fw-bold">Địa chỉ</p>
 <p>
 	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', esc_html__( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 </p>

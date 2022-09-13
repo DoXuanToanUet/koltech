@@ -142,6 +142,25 @@
             .woocommerce-MyAccount-content{
                 width: 100%;
             }
+            .woocommerce-MyAccount-navigation{
+                padding: 0px;
+                width: 100%;
+                border: none;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                        padding: 0px 8px;
+                    }
+                    li.is-active{
+                        border-top:2px solid #2579f2;
+                        border-left: 0px;
+                    }
+                    .dsh-hidden{
+                        display: none;
+                    }
+                }
+            }
             .dashboard-content-wrapper{
                 width: unset;
                 padding: 0px;
@@ -169,4 +188,5 @@
         margin: 20px auto;
         padding: 20px;
     }
+
 }

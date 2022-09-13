@@ -27,11 +27,7 @@ $allowed_html = array(
 	),
 );
 ?>
-<?php 
-	
-
-
-?>
+<p class="fw-bold">Trang tài khoản</p>
 <p>
 	<?php
 	printf(
@@ -198,35 +194,35 @@ $allowed_html = array(
 			<div class="mb-2"></div>
 			<a href="<?php echo esc_url( wc_get_account_endpoint_url('edit-account') ); ?>" class="btn btn-outline-primary">Sửa thông tin</a>
 			<?php 
-				$customer = wp_get_current_user(); // do this when user is logged in
-				$customer_orders = get_posts(array(
-					'numberposts' => -1,
-					'meta_key' => '_customer_user',
-					'orderby' => 'date',
-					'order' => 'DESC',
-					'meta_value' => get_current_user_id(),
-					'post_type' => wc_get_order_types(),
-					'post_status' => array_keys(wc_get_order_statuses()), 
-					'fields' => 'ids',
-					'date_query' => array(
-						array(
-							'after' => '2 day ago'
-						)
-					)
-				));
+				// $customer = wp_get_current_user(); // do this when user is logged in
+				// $customer_orders = get_posts(array(
+				// 	'numberposts' => -1,
+				// 	'meta_key' => '_customer_user',
+				// 	'orderby' => 'date',
+				// 	'order' => 'DESC',
+				// 	'meta_value' => get_current_user_id(),
+				// 	'post_type' => wc_get_order_types(),
+				// 	'post_status' => array_keys(wc_get_order_statuses()), 
+				// 	'fields' => 'ids',
+				// 	'date_query' => array(
+				// 		array(
+				// 			'after' => '2 day ago'
+				// 		)
+				// 	)
+				// ));
 
-				$user_orders = array(); //
-				foreach ($customer_orders as $orderID) {
-					$orderObj = wc_get_order($orderID);
-					$user_orders[] = array(
-						"orderID" => $orderObj->get_id(),
-						"orderTotal" => $orderObj->get_total(),
-						"orderDate" => $orderObj->get_date_created()->date_i18n('Y-m-d h:i:s'),
-					);
-				}
-				echo '<pre>';
-				var_dump($user_orders);
-				echo '</pre>';
+				// $user_orders = array(); //
+				// foreach ($customer_orders as $orderID) {
+				// 	$orderObj = wc_get_order($orderID);
+				// 	$user_orders[] = array(
+				// 		"orderID" => $orderObj->get_id(),
+				// 		"orderTotal" => $orderObj->get_total(),
+				// 		"orderDate" => $orderObj->get_date_created()->date_i18n('Y-m-d h:i:s'),
+				// 	);
+				// }
+				// echo '<pre>';
+				// var_dump($user_orders);
+				// echo '</pre>';
 				// foreach ($user_orders as $user_orders_item) {
 				// 	echo '<pre>';
 				// 	// var_dump( count($user_orders) );
@@ -234,6 +230,28 @@ $allowed_html = array(
 				// 	// echo "break";
 				// 	echo '</pre>';
 				// 	// echo "step2";
+				// }
+			?>
+			<!-- Test woocommerce order list -->
+			<?php 
+				// $query = new WC_Order_Query( array(
+				// 	'limit' => 10,
+				// 	'orderby' => 'date',
+				// 	'order' => 'DESC',
+				// 	'return' => 'ids',
+					
+				// ) );
+				// $orders = $query->get_orders();
+				// foreach ($orders as $key => $value) {
+				// 	# code...
+				// 	$get_order = wc_get_order( $value );
+				// 	foreach ($get_order->get_items() as $item_key => $item ):
+				// 		$product = $item->get_name();
+				// 		echo "<pre>";
+				// 		var_dump($product);
+				// 		echo "</pre>";
+				// 	endforeach;
+				// 	// $order_data = $order->get_data();
 				// }
 			?>
 		</div>

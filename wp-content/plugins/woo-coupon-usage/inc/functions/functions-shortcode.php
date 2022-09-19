@@ -131,7 +131,7 @@ function wcusage_couponusage( $atts )
                     
                     if ( ($is_mla_parent || $couponuser == $currentuserid || wcusage_check_admin_access() || $coupon_user_id == "" && !$wcusage_urlprivate) && ($urlid || $couponuser == $currentuserid || !empty($atts['coupon'])) ) {
                         ?>
-
+                    <p class="fw-bold">Mã của bạn </p>
     			  <div class="wcu-dash-coupon-area">
 
             <style>.wcu-user-coupon-title, .wcu-user-coupon-linebreak { display: none; }</style>

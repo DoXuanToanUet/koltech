@@ -1,5 +1,6 @@
 <?php 
     $current_user = wp_get_current_user();
+
     // var_dump($current_user->ID);
     $args = array(
         'post_type' => 'shop_coupon',
@@ -22,7 +23,7 @@
     // var_dump($numcoupons);
     $kol_title_arr = [];
     $clickcount_arr = [];
-    ?><div class="cp-wrapper"><?php
+    ?><p class="fw-bold">Báo cáo</p><div class="cp-wrapper"><?php
     if ( $report->have_posts() ) : while ( $report->have_posts() ) : $report->the_post();
         // $usage = get_post_meta( get_the_ID(), 'usage_count', true );
         // $meta = get_post_meta( get_the_ID() );

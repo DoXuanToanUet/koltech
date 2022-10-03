@@ -193,8 +193,29 @@
             });
         });
 
+
+
+        function activeChildRankTab(obj) {
+            // console.log(obj);
+            $(".rank__body_child-tab  .common-tab").removeClass("active-tab");
+            let id = $(obj).data("tab");
+            console.log(id);
+            $(obj).addClass("active-tab");
+            $(".rank__body_child-content").hide();
+            // console.log(id);
+            $('.'+id).show();
+        }
+        $('.rank__body_child-tab .common-tab').click(function (e) {
+            // console.log(e.target)
+            e.preventDefault();
+            activeChildRankTab(this);
+
+        })
+        activeChildRankTab('.rank__body_child-tab  .common-tab:first-child');
+
+        // $(".rank__tab-content .child-all").hide();
         //Phần tab chính sách phát đại lí, cá nhân
-        function activeTab(obj) {
+        function activeRankTab(obj) {
             $(".rank__tab .common-tab").removeClass("active-tab");
             let id = $(obj).data("tab");
             $(obj).addClass("active-tab");
@@ -203,15 +224,86 @@
             $('.'+id).show();
         }
         $('.rank__tab .common-tab').click(function (e) {
-            // console.log(e.target)
+            
             e.preventDefault();
-            activeTab(this);
-
+            console.log( '.'+ $(this).data('tab') + ' .rank__body_child-tab .common-tab:first-child' );
+            activeRankTab(this);
+            activeChildRankTab('.'+ $(this).data('tab') + ' .rank__body_child-tab .common-tab:first-child');
         })
-        activeTab('.rank__tab .common-tab:first-child');
-
-
+        activeRankTab('.rank__tab .common-tab:first-child');
+        // $(".rank__body_child-tab .child-all").hide();
+      
         
     })
     
 })(jQuery);
+
+
+
+/*=============================================================================================*/
+/* Jquery cho 2 nut cộng trừ  */
+
+jQuery(document).ready(function($){
+
+	jQuery( function( $ ) {
+
+		if ( ! String.prototype.getDecimals ) {
+			String.prototype.getDecimals = function() {
+				var num = this,
+				match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+				if ( ! match ) {
+					return 0;
+				}
+				return Math.max( 0, ( match[1] ? match[1].length : 0 ) - ( match[2] ? +match[2] : 0 ) );
+			}
+		}
+		$( document ).on( 'updated_wc_div', function() {
+		} );
+		$( document ).on( 'click', '.plus, .minus', function() {
+        // Get values
+        var $qty      = $( this ).closest( '.quantity' ).find( '.qty'),
+        currentVal = parseFloat( $qty.val() ),
+        max          = parseFloat( $qty.attr( 'max' ) ),
+        min          = parseFloat( $qty.attr( 'min' ) ),
+        step      = $qty.attr( 'step' );
+
+        // Format values
+        if ( ! currentVal || currentVal === '' || currentVal === 'NaN' ) currentVal = 0;
+        if ( max === '' || max === 'NaN' ) max = '';
+        if ( min === '' || min === 'NaN' ) min = 0;
+        if ( step === 'any' || step === '' || step === undefined || parseFloat( step ) === 'NaN' ) step = 1;
+
+
+        // Change the value
+        if ( $( this ).is( '.plus' ) ) {
+        	if ( max && ( currentVal >= max ) ) {
+        		$qty.val( max );
+        	} else {
+        		$qty.val( ( currentVal + parseFloat( step )).toFixed( step.getDecimals() ) );
+        	}
+        } else {
+        	if ( min && ( currentVal <= min ) ) {
+        		$qty.val( min );
+        	} else if ( currentVal > 0 ) {
+        		$qty.val( ( currentVal - parseFloat( step )).toFixed( step.getDecimals() ) );
+        	}
+        } 
+
+       
+        // Trigger change event
+        $qty.trigger( 'change' );
+          
+    });
+	});
+
+if($('.cart .qty').length){
+        var originalUrl = $('#express-checkout').attr('href');
+        $('.cart .qty').change(function(){
+            var url = originalUrl + '&quantity=' + $(this).val();
+            $('#express-checkout').attr('href', url);
+        });
+    }
+
+
+//End javascript
+});

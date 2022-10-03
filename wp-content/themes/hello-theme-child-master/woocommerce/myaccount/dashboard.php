@@ -27,7 +27,7 @@ $allowed_html = array(
 	),
 );
 ?>
-<p class="fw-bold">Trang tài khoản</p>
+<p class="fw-bold dsh-title">Trang tài khoản</p>
 <p>
 	<?php
 	printf(

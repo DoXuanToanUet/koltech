@@ -52,7 +52,10 @@ $header_nav_menu = wp_nav_menu( [
 			</nav>
 			<div class="site-navigation-toggle-holder <?php echo hello_show_or_hide( 'hello_header_menu_display' ); ?>">
 				<div class="site-navigation-toggle">
-					<i class="eicon-menu-bar"></i>
+					<!-- <i class="eicon-menu-bar"></i> -->
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
 					<span class="elementor-screen-only">Menu</span>
 				</div>
 			</div>

@@ -59,59 +59,59 @@ add_action( 'admin_head', 'fix_svg' );
 /**
  * AKAZA  Step 1: Allow only 1 element in the cart.
  */
-add_filter( 'woocommerce_add_cart_item_data', function ( $cart_item_data ) {
-	global $woocommerce;
-	$woocommerce->cart->empty_cart();
-	return $cart_item_data;
-} );
+// add_filter( 'woocommerce_add_cart_item_data', function ( $cart_item_data ) {
+// 	global $woocommerce;
+// 	$woocommerce->cart->empty_cart();
+// 	return $cart_item_data;
+// } );
 
 /**
  * Step 2. Disable AJAX "Add to cart" Buttons.
  */
-add_filter( 'option_woocommerce_enable_ajax_add_to_cart', '__return_false' );
+// add_filter( 'option_woocommerce_enable_ajax_add_to_cart', '__return_false' );
 
 /**
  * Step 3a: Redirect to the checkout page after adding a product to the to cart.
  */
-add_filter('add_to_cart_redirect', function () {
-	return wc_get_page_permalink( 'checkout' ); 
-} );
+// add_filter('add_to_cart_redirect', function () {
+// 	return wc_get_page_permalink( 'checkout' ); 
+// } );
 
 /**
  * Step 3b: Remove '“Product blah blah blah” has been added to your cart. | View cart'.
  */
-add_filter( 'wc_add_to_cart_message_html', '__return_null' );
+// add_filter( 'wc_add_to_cart_message_html', '__return_null' );
 
 /**
  * Step 3c: Redirect cart to checkout.
  */
-add_action( 'wp', function() {
-	if ( is_cart() ) {
-		wp_safe_redirect( wc_get_page_permalink( 'checkout' ) );
-		exit;
-	}
-} );
+// add_action( 'wp', function() {
+// 	if ( is_cart() ) {
+// 		wp_safe_redirect( wc_get_page_permalink( 'checkout' ) );
+// 		exit;
+// 	}
+// } );
 
 /**
  * Step 4a: Change "Add to cart".
  */
-add_action( 'init', function() {
+// add_action( 'init', function() {
 
-	$text = 'Buy Now';
+// 	$text = 'Buy Now';
 
-	add_action( 'woocommerce_product_add_to_cart_text', function() use ( $text ) {
-		return $text;
-	} );
+// 	add_action( 'woocommerce_product_add_to_cart_text', function() use ( $text ) {
+// 		return $text;
+// 	} );
 
-	add_action( 'woocommerce_product_single_add_to_cart_text', function() use ( $text ) {
-		return $text;
-	} );
-} );
+// 	add_action( 'woocommerce_product_single_add_to_cart_text', function() use ( $text ) {
+// 		return $text;
+// 	} );
+// } );
 
 /**
  * Step 4b:Remove the quantity input field.
  */
-add_filter( 'woocommerce_is_sold_individually', '__return_true' );
+// add_filter( 'woocommerce_is_sold_individually', '__return_true' );
 
 // add_role("kol_user","KOL/KOC",array(
 // 	"read"=>true
@@ -132,6 +132,7 @@ function add_theme_scripts()
 
     wp_enqueue_style('devMainCss', get_stylesheet_directory_uri() . '/assets/css/custom.css', array(), $version, 'all');
     wp_enqueue_style('BootstrapCss', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', array(), $version, 'all');
+    wp_enqueue_style('devFontAwe', get_stylesheet_directory_uri() . '/assets/plugins/fontAwesome/font-awesome.min.css', array(), $version, 'all');
     // wp_enqueue_style('DataTableCss', get_stylesheet_directory_uri() . '/assets/plugin/xls/jquery.dataTables.min.css', array(), $version, 'all');
   
     wp_enqueue_script('devMainJS', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), $version, true);
@@ -151,6 +152,7 @@ require get_stylesheet_directory() . '/inc-function/custom-avartar.php';
 require get_stylesheet_directory() . '/inc-function/inc_acf_roles.php';
 require get_stylesheet_directory() . '/inc-function/shrt_rank.php';
 require get_stylesheet_directory() . '/template-page/shrt-ranks.php';
+require get_stylesheet_directory() . '/inc-function/shrt_rank_role.php';
 
 
 
@@ -161,7 +163,7 @@ if (function_exists('acf_add_options_page')) {
       'page_title' => 'Coupon Settings',
       'menu_title' => 'Coupon Settings',
       'menu_slug'  => 'coupon-general-settings',
-      'capability' => 'edit_posts',
+      'capability' => 'manage_options',
       'redirect'   => false
   ));
 
@@ -268,3 +270,59 @@ function WlastOrder(){
 //     $new_order_id = $prefix . $order_id . $suffix;
 //     return $new_order_id;
 // }
+
+
+// Change sale
+// ===========================================
+add_filter('woocommerce_sale_flash', 'ds_change_sale_text');
+function ds_change_sale_text() {
+  return '<span class="onsale onsale_badge">Sale</span>';
+}
+
+// Thêm hình ảnh cho sản phẩm trang checkout
+// ===========================================
+add_filter( 'woocommerce_cart_item_name', 'ts_product_image_on_checkout', 10, 3 );
+ 
+function ts_product_image_on_checkout( $name, $cart_item, $cart_item_key ) {
+     
+    /* Return if not checkout page */
+    if ( ! is_checkout() ) {
+        return $name;
+    }
+     
+    /* Get product object */
+    $_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+ 
+    /* Get product thumbnail */
+    $thumbnail = $_product->get_image();
+ 
+    /* Add wrapper to image and add some css */
+    $image = '<div class="ts-product-image" style="width: 64px; height: 64px; display: inline-block; padding-right: 7px; vertical-align: middle;">'
+                . $thumbnail .
+            '</div>'; 
+ 
+    /* Prepend image to name and return it */
+    return $image . $name;
+}
+
+// function tf_check_user_role( $roles ) {
+//   /*@ Check user logged-in */
+//   if ( is_user_logged_in() ) :
+//       /*@ Get current logged-in user data */
+//       $user = wp_get_current_user();
+//       /*@ Fetch only roles */
+//       $currentUserRoles = $user->roles;
+//       /*@ Intersect both array to check any matching value */
+//       $isMatching = array_intersect( $currentUserRoles, $roles);
+//       $response = false;
+//       /*@ If any role matched then return true */
+//       if ( !empty($isMatching) ) :
+//           $response = true;        
+//       endif;
+//       return $response;
+//   endif;
+// }
+// $roles = [ 'shop_manager' ];
+// if ( tf_check_user_role($roles) ) :
+//   add_filter('show_admin_bar', '__return_false');
+// endif;

@@ -1,4 +1,6 @@
 @import "login.scss";
+@import "common.scss";
+$main_color: #f0407b;
 .kol_alert{
     display: none;
 }
@@ -17,10 +19,10 @@
     }
 }
 .register-form {
-    max-width: 450px;
+    max-width: 400px;
     margin: 0px auto;
     background:#fff;
-    padding: 20px;
+    padding: 28px;
     border-radius: 10px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1);         
 }
@@ -40,7 +42,7 @@
 .devRegis-item .show-password-icon {
     position: absolute;
     right: 8px;
-    top: calc(50% + 8px);
+    top: 22px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -125,7 +127,41 @@
     }
 }
 
-
+.header-inner {
+    .site-navigation-toggle-holder .site-navigation-toggle{
+        background: none;
+        color: #000;
+        svg{
+            width: 30px;
+            height: 30px;
+    
+        }
+    }
+    .site-navigation-dropdown ul.menu li a{
+        padding: 10px;
+    }
+}
+.wcu-dash-coupon-area .wcutab{
+    button{
+        letter-spacing: normal;
+        padding: 15px;
+        border-radius: 4px;
+    }
+}
+button{
+    border: none !important;
+}
+::selection {
+    color: #fff;
+    background-color: $main_color;
+}
+.site-header .site-navigation .menu li.current-menu-item {
+    a{
+        color: $main_color;
+        
+    }
+    
+}
 @media (max-width:991px){ 
     .woocommerce-account {
         .dashboard-content-wrapper,.woocommerce-MyAccount-content,.woocommerce-MyAccount-navigation{
@@ -135,15 +171,27 @@
             background:#fff;
         }
     }
-     
+    .site-navigation-dropdown ul.menu li a{
+        font-size: 20px;
+        color: #000;
+        font-weight: bold;
+    }
 }
 @media (max-width:575px){
-   
     .woocommerce-account {
        
     }
     .woocommerce{
         background:#fff;
     }
-    
+    .site-navigation-dropdown ul.menu li a{
+        font-size: 18px;
+    }
+    .register-form{
+        padding: 15px 10px;
+    }
+    .wcusage-info-box{
+        margin-bottom: 10px;
+    }
 }
+

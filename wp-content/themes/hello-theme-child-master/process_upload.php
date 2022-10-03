@@ -166,4 +166,3 @@ if($image_width > "400" || $image_height > "400") {
 
 }
 
-

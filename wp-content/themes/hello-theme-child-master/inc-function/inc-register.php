@@ -6,13 +6,13 @@
     <div class="register-form-title text-center" style="font-size:20px; padding-bottom:20px; font-weight:600">Đăng ký tài khoản</div>
     <form method="post" id="devRegis-form" class="devRegis-form">
         <div class="row row-small">
-            <div class="col col-lg-6 col-12">
+            <div class="col col-lg-6 ">
                 <div class="devRegis-item">
                     <label>Họ của bạn:</label>
                     <input type="text" value="" name="last_name" id="last_name" placeholder="Nhập họ của bạn" required/>
                 </div>
             </div>
-            <div class="col col-lg-6 col-12">
+            <div class="col col-lg-6 ">
                 <div class="devRegis-item">
                     <label>Tên của bạn:</label>
                     <input type="text" value="" name="first_name" id="first_name" placeholder="Nhập tên của bạn"  required/>

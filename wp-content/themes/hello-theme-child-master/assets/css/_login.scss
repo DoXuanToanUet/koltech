@@ -73,12 +73,33 @@
         }
     }
     .woocommerce-form.woocommerce-form-login.login{
-        max-width: 500px;
+        max-width: 400px;
         margin: 50px auto;
     }
 }
-
+.register-form{
+    label{
+        display: none;
+    }
+}
 // Rank 
+.rank__body_child-tab{
+    justify-content: center;
+    align-items: center;
+    .rank__tab-item{
+        border-radius: 0px !important;
+        padding: 4px;
+        background:none !important;
+        color: #fff !important;
+        // text-transform: uppercase;
+        font-weight: bold;
+        font-size: 15px;
+        // border-right: 1px solid #fff;
+        &.active-tab{
+            color: var(--wc-orange) !important;
+        }
+    }
+}
 .rank{
     &__container{
         max-width: 400px;
@@ -103,12 +124,14 @@
         // width: 100%;
     }
     &__tab{
+        
         &-item{
             // color: #000;
             color: #fff;
             padding: 12px;
             background-color: rgba(0,0,0,.4);
             cursor: pointer;
+            font-size: 16px;
             &.active-tab{
                 background: #fff;
                 color: #000;
@@ -125,12 +148,12 @@
         line-height: 15px;
         display: flex;
         align-items: center;
-        justify-content: flex-start; 
+        justify-content: center; 
     }
     &__body{
         background:#232323;
         color: #fff;
-        padding: 15px;
+        padding: 0px 10px;
         border-radius: 0 0 8px 8px;
         border: 1px solid #323232;
     }
@@ -145,6 +168,12 @@
         height: 34px;
         text-align: center;
     }
+}
+#devRegis-btn{
+    padding: 10px !important;
+    background: -webkit-linear-gradient(left,#f0407b,#531f8f) !important;
+    border: none;
+
 }
 @media (max-width:575px){
     .kol-login{
